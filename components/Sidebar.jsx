@@ -2,10 +2,13 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useClerk, UserButton } from "@clerk/nextjs";
 import { useAppContext } from "@/context/AppContext";
+import ChatLabel from "./ChatLabel";
+import { useState } from "react";
 
 const Sidebar = ({ expand, setExpand }) => {
   const { openSignIn } = useClerk();
   const { user } = useAppContext();
+  const [openMenu, setOpenMenu] = useState({id: 0, open: false})
   return (
     <div
       className={`flex flex-col justify-between bg-[#212327] pt-7 transition-all z-50 max-md:absolute max-md:h-screen ${expand ? "p-4 w-64" : "md:w-20 w-0 max-md:overflow-hidden"}`}
@@ -61,6 +64,8 @@ const Sidebar = ({ expand, setExpand }) => {
         >
           <p className="my-1">Recents</p>
           {/* Chat label */}
+          <ChatLabel openMenu={openMenu} setOpenMenu={setOpenMenu} />
+
         </div>
       </div>
 
