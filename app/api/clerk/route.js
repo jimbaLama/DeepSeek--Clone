@@ -21,7 +21,7 @@ export async function POST(req) {
   // Prepare the user data to be saved in the db
   const userData = {
     _id: data.id,
-    email: data.email_addresses[0].email_addresses,
+    email: data.email_addresses[0].email_address,
     name: `${data.first_name} ${data.last_name}`,
     image: data.image_url,
   };
@@ -30,7 +30,7 @@ export async function POST(req) {
 
   switch (type) {
     case "user.created":
-      await User.create(UserData);
+      await User.create(userData);
       break;
 
     case "user.updated":
