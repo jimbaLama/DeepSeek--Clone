@@ -20,12 +20,12 @@ const Message = ({ role, content }) => {
                   <Image
                     src={assets.copy_icon}
                     alt=""
-                    className="w-4 cursor-pointer"
+                    className="w-4 h-auto cursor-pointer"
                   />
                   <Image
                     src={assets.pencil_icon}
                     alt=""
-                    className="w-4.5 cursor-pointer"
+                    className="w-4.5 h-auto cursor-pointer"
                   />
                 </>
               ) : (
@@ -33,22 +33,22 @@ const Message = ({ role, content }) => {
                   <Image
                     src={assets.copy_icon}
                     alt=""
-                    className="w-4.5 cursor-pointer"
+                    className="w-4.5 h-auto cursor-pointer"
                   />
                   <Image
                     src={assets.regenerate_icon}
                     alt=""
-                    className="w-4 cursor-pointer"
+                    className="w-4 h-auto cursor-pointer"
                   />
                   <Image
                     src={assets.like_icon}
                     alt=""
-                    className="w-4 cursor-pointer"
+                    className="w-4 h-auto cursor-pointer"
                   />
                   <Image
                     src={assets.dislike_icon}
                     alt=""
-                    className="w-4 cursor-pointer"
+                    className="w-4 h-auto cursor-pointer"
                   />
                 </>
               )}

@@ -18,7 +18,7 @@ const Sidebar = ({ expand, setExpand }) => {
           className={`flex ${expand ? "flex-row gap-10" : "flex-col items-center gap-8"}`}
         >
           <Image
-            className={expand ? "w-36" : "w-10"}
+            className={expand ? "w-36 h-auto" : "w-10 h-auto"}
             src={expand ? assets.logo_text : assets.logo_icon}
             alt=""
           />
@@ -31,7 +31,7 @@ const Sidebar = ({ expand, setExpand }) => {
             <Image
               src={expand ? assets.sidebar_close_icon : assets.sidebar_icon}
               alt=""
-              className="hidden md:block w-7"
+              className="hidden md:block w-7 h-auto"
             />
             <div
               className={`absolute w-max ${expand ? "left-1/2 -translate-x-1/2 top-12" : "-top-12 left-0"} opacity-0 group-hover:opacity-100 transition bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg pointer-events-none`}
@@ -50,7 +50,7 @@ const Sidebar = ({ expand, setExpand }) => {
           <Image
             src={expand ? assets.chat_icon : assets.chat_icon_dull}
             alt=""
-            className={expand ? "w-6" : "w-7"}
+            className={expand ? "w-6 h-auto" : "w-7 h-auto"}
           />
           <div className="absolute w-max -top-12 -right-12 opacity-0 group-hover:opacity-100 transition bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg pointer-events-none">
             New chat
@@ -74,7 +74,7 @@ const Sidebar = ({ expand, setExpand }) => {
           className={`flex items-center cursor-pointer group relative ${expand ? "gap-1 text-white/80 text-sm p-2.5 border border-primary rounded-lg hover:bg-white/10 cursor-pointer" : "h-10 w-10 mx-auto hover:bg-gray-500/30 rounded-lg"} `}
         >
           <Image
-            className={expand ? "w-5" : "w-6.5 mx-auto"}
+            className={expand ? "w-5 h-auto" : "w-6.5 h-auto mx-auto"}
             src={expand ? assets.phone_icon : assets.phone_icon_dull}
             alt=""
           />
@@ -82,7 +82,7 @@ const Sidebar = ({ expand, setExpand }) => {
             className={`absolute -top-60 pb-8 ${!expand && "-right-40"} opacity-0 group-hover:opacity-100 hidden group-hover:block transition`}
           >
             <div className="relative w-max bg-black text-white text-sm p-3 rounded-lg shadow-lg">
-              <Image src={assets.qrcode} alt="" className="w-44" />
+              <Image src={assets.qrcode} alt="" className="w-44 h-auto" />
               <p>Sacn to get DeepSeek App</p>
               <div
                 className={`w-3 h-3 absolute bg-black rotate-45 ${expand ? "right-1/2" : "left-4"} -bottom-1.5`}
@@ -103,7 +103,7 @@ const Sidebar = ({ expand, setExpand }) => {
           {user ? (
             <UserButton />
           ) : (
-            <Image src={assets.profile_icon} alt="" className="w-7" />
+            <Image src={assets.profile_icon} alt="" className="w-7 h-auto" />
           )}
 
           {expand && <span>My Profile</span>}

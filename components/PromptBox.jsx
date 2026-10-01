@@ -19,22 +19,22 @@ const PromptBox = ({isLoading, setIsLoading}) => {
       <div className="flex items-center justify-between text-sm">
         <div className="flex items-center gap-2">
           <p className="flex items-center gap-2 text-xs border border-gray-300/40 px-2 py-1 rounded-full cursor-pointer hover:bg-gray-500/20 transition">
-            <Image src={assets.deepthink_icon} alt="" className="h-5" />
+            <Image src={assets.deepthink_icon} alt="" className="h-5 w-auto" />
             DeepThink (R1)
           </p>
           <p className="flex items-center gap-2 text-xs border border-gray-300/40 px-2 py-1 rounded-full cursor-pointer hover:bg-gray-500/20 transition">
-            <Image src={assets.search_icon} alt="" className="h-5" />
+            <Image src={assets.search_icon} alt="" className="h-5 w-auto" />
             Search
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Image src={assets.pin_icon} alt="" className="w-4 cursor-pointer" />
+          <Image src={assets.pin_icon} alt="" className="w-4 h-auto cursor-pointer" />
           <button
             className={`${prompt ? "bg-primary" : "bg-[#71717a]"} rounded-full p-2 cursor-pointer`}
           >
             <Image
               src={prompt ? assets.arrow_icon : assets.arrow_icon_dull}
-              className="w-3.5 aspect-square"
+              className="w-3.5 h-auto"
               alt=""
             />
           </button>
