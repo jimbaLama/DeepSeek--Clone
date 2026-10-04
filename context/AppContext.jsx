@@ -16,7 +16,9 @@ export const AppContextProvider = ({ children }) => {
   const { getToken } = useAuth();
 
   const [chats, setChats] = useState([]);
-  const [selectedChat, setSelectedChat] = useState(null);
+  const [selectedChat, setSelectedChat] = useState({
+    messages: []
+  });
 
   const createNewChat = async () => {
     try {
@@ -73,7 +75,7 @@ export const AppContextProvider = ({ children }) => {
     if (user) {
       fetchUserChats();
     }
-  }, [user]);
+  }, []); // [user]
 
   useEffect(() => {
     if (!isLoaded || !userId) return;
